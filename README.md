@@ -12,9 +12,10 @@ This is not a replacement for saving or Inkscape autosave :) ---
 
 Take the PY and INX file and place in the Extensions folder.
 
-I found two extension folders on my Linux PC:
+Linux Extension locations:
 
-/home/username/.config/inkscape/extensions or 
+/home/username/.config/inkscape/extensions
+
 /usr/share/inkscape/extensions
 
 If it's not there or you're on Windows of Mac, try: 'Edit ‣ Preferences ‣ System: User extensions' to see which directory holds your extensions
