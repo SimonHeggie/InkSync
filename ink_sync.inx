@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Copyright (C) [2023] [Simon Heggie], [simon.p.heggie@gmail.com]-->
+<!--Copyright (C) [2021] [Matt Cottam (quick_export)], [mpcottam@raincloud.co.uk]-->
+<!--This program is free software; you can redistribute it and/or modify-->
+<!--it under the terms of the GNU General Public License as published by-->
+<!--the Free Software Foundation; either version 2 of the License, or-->
+<!--(at your option) any later version.-->
+<!--This program is distributed in the hope that it will be useful,-->
+<!--but WITHOUT ANY WARRANTY; without even the implied warranty of-->
+<!--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the-->
+<!--GNU General Public License for more details.-->
+<!--You should have received a copy of the GNU General Public License-->
+<!--along with this program; if not, write to the Free Software-->
+<!--Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.-->
+
+<!-- #############################################################################-->
+<!-- #  Ink Sync - Quickly sync Inkscape svg, plain svg, and png-->
+<!-- #  After setting the options in the main dialogue-->
+<!-- # 'Overwrite Existing Files' activates sync behavior-->
+<!-- #  Assign a shortcut in Inkscape Edit>Preferences>Interface>Keyboard to org.inkscape.simonh.ink_sync.noprefs-->
+<!-- #  For shortcut triggered quick export-->
+<!-- # Requires Inkscape 1.1+ (1.3 tested) -->
+<!-- #############################################################################-->
+
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Ink Sync</name>
+    <id>org.inkscape.simonh.ink_sync</id>
+    <param name="notebook_main" type="notebook">
+        <page name="settings_page" gui-text="Settings">
+            <hbox>
+                <param name="export_svg_cb" type="boolean" gui-text="Export Inkscape SVG" gui-description="Export Inkscape SVG">true</param>
+                <param name="export_svg_ttp_cb" type="boolean" gui-text="Export Inkscape SVG (Text to Path)" gui-description="Export Inkscape SVG (Text to path)">true</param>
+            </hbox>
+            <hbox>
+                <param name="export_svg_plain_cb" type="boolean" gui-text="Export Plain SVG" gui-description="Export Plain SVG">true</param>
+                <param name="export_svg_plain_ttp_cb" type="boolean" gui-text="Export Plain SVG (Text to path)" gui-description="Export Plain SVG (Text to path)">true</param>
+            </hbox>
+            <param name="export_png_cb" type="boolean" gui-text="Export PNG" gui-description="Export PNG">true</param>
+            <param name="png_dpi" type="int" min="10" max="99999999" gui-text="PNG dpi">96</param>
+            <separator/>
+            <param name="export_pdf_cb" type="boolean" gui-text="Export PDF" gui-description="Export PDF Document">true</param>
+            <param name="export_html5_cb" type="boolean" gui-text="Export HTML5" gui-description="Export HTML5 Canvas">true</param>
+            <separator/>
+            <param type="path" name="save_path" gui-text="File Save Path" mode="folder">None Selected</param>
+            <separator/>
+            <param name="overwrite_existing_file" type="boolean" gui-text="Overwrite Existing File" gui-description="If checked, the file will be overwritten instead of creating a new file with a unique timestamp.">false</param>
+        </page>
+        <page name="about_page" gui-text="About">
+            <label>
+                Ink Sync - Quickly sync Inkscape svg, plain svg, png, pdf and html5 canvas to other apps.
+            </label>
+            <label>
+                Inkscape 1.1+
+            </label>
+            <label appearance="url">
+                [Your new extension's URL or contact info]
+            </label>
+            <label appearance="url">
+                [Additional URLs or information as needed]
+            </label>
+            <label>
+            * This is not a replacement for saving or Inkscape autosave :) ---
+            Appears at Extensions>Export ---
+            'Overwrite Existing Files' activates sync behavior ---
+            After setting the options in the main dialogue ---
+            Assign a shortcut in Inkscape Edit>Preferences>Interface>Keyboard to
+            </label>
+                <label appearance="header">org.inkscape.simonh.ink_sync.noprefs
+                </label>
+            <label>
+                For shortcut triggered quick export --- Not 100% sure where the PDF and HTML5 settings are pulled from, presume from last used save settings.
+            </label>
+        </page>
+    </param>
+    <effect needs-live-preview="false">
+        <object-type>path</object-type>
+        <effects-menu>
+            <submenu name="Export"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">ink_sync.py</command>
+    </script>
+</inkscape-extension>

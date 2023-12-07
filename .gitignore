@@ -1,0 +1,20 @@
+# Python-specific files
+__pycache__/
+*.py[cod]
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# Build artifacts
+/build/
+/dist/
+
+# Files with sensitive information
+*.env
+config/settings.json
+
