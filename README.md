@@ -17,7 +17,7 @@ For shortcut triggered quick export --- Not 100% sure where the PDF and HTML5 se
 
 These formats should work fine in multiple different apps including Photoshop and Blender.
 I'll explain the process in Krita and it will be a very similar process for Photoshop users.
-And obviously the lightest and most useful form is SVG.
+Because the focus on Inkscape is Vector and SVG is the best performing format here, that's what I recommend for most interchanges.
 
 Syncing an SVG to Krita:
 
