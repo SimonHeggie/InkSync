@@ -8,6 +8,19 @@ Inkscape 1.1+ (1.3 tested)
 
 This is not a replacement for saving or Inkscape autosave :) ---
 
+**Installation:**
+
+Take the PY and INX file and place in the Extensions folder.
+
+I found two extension folders on my Linux PC:
+
+/home/username/.config/inkscape/extensions or 
+/usr/share/inkscape/extensions
+
+If it's not there or you're on Windows of Mac, try: 'Edit ‣ Preferences ‣ System: User extensions' to see which directory holds your extensions
+
+**USE:**
+
 -Appears at Extensions>Export
 -After setting the options in the main dialogue, assign a shortcut in Inkscape Edit>Preferences>Interface>Keyboard to:
 
