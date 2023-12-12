@@ -47,3 +47,8 @@ Based on Inklinea's Quick Export extension:
 https://gitlab.com/inklinea/quick-export
 
 Be sure to support his efforts on quick export as InkSync may rely on his technology moving forward.
+
+Future ideas:
+
+-Option to merge layers down
+-Support more types of objects/setups
